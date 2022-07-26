@@ -1,0 +1,41 @@
+mixin footer()
+  footer.footer
+    .container
+      .footer__inner
+        .footer__left 
+          a.footer__logo(href="index.html")
+            img(src="img/icons/logo.svg", alt="Logo footer")
+          p.footer__desription
+            | We offer outstanding gambling experience and turn it into the best deal for every player, full of winning opportunities and fair outcomes. It will help you achieve the desired results in a short time.
+          p.footer__desription
+            | © 2021 Spades partners All rights reserved
+
+        .footer__menu
+          nav.footer__nav
+            ul.footer__menu-ul
+              li.footer__menu-li
+                a.footer__menu-link(href="index.html#about") About Us
+              li.footer__menu-li
+                a.footer__menu-link(href="index.html#pass") Aura Pass
+            ul.footer__menu-ul
+              li.footer__menu-li
+                a.footer__menu-link(href="index.html#how-it-works") How it works
+              li.footer__menu-li
+                a.footer__menu-link(href="index.html#benefits") Benefits
+            ul.footer__menu-ul
+              li.footer__menu-li
+                a.footer__menu-link(href="index.html#roadmap") Roadmap
+              li.footer__menu-li
+                a.footer__menu-link(href="index.html#levels") Levels
+            ul.footer__menu-ul
+              li.footer__menu-li
+                a.footer__menu-link(href="index.html#team") Contacts
+              li.footer__menu-li
+                a.footer__menu-link(href="index.html#faq") FAQ
+
+          .footer__socials
+            span.footer__follow Follow Us:
+            .footer__icons
+              each key, value in {'img/icons/footer-twitter.svg': 'Twitter', 'img/icons/footer-post.svg': 'Post', 'img/icons/footer-telegram.svg': 'Telegram', 'img/icons/footer-discord.svg': 'Discord'}
+                a.footer__icons-item(href="#" target="_blank")
+                  img(src=value, alt=key)

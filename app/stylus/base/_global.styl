@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap")
+
+@font-face
+  font-family "MonumentExtended-Regular"
+  src url("fonts/MonumentExtended-Regular.woff2") format("woff2"), url("../fonts/MonumentExtended-Regular.woff") format("woff")
+  font-weight normal
+  font-style normal
+  font-display swap
+
+$font = "Montserrat", sans-serif
+$fontTitle = "MonumentExtended-Regular", sans-serif
+
+@import "_vars"
+@import "../includes/header/index.styl"
+@import "../includes/footer/index.styl"
+@import "../includes/modules/button/index.styl"
+@import "../includes/modules/pictures/index.styl"
+@import "../includes/modules/modals/index.styl"
+
+html
+  height 100%
+  box-sizing border-box
+  scroll-behavior smooth
+  font-size 62.5% // 1rem =10px; 10px/16px = 62.5%
+
+  @media (max-width 1024px)
+    font-size 50% // 1rem =8px; 8px/16px = 50%
+
+  @media (max-width 768px)
+    font-size 40% // 1rem = 6.4; 6.4px/16px = 40%
+
+*,
+*::before,
+*::after
+  box-sizing inherit
+  padding 0
+  margin 0
+
+body
+  display flex
+  flex-direction column
+  height 100%
+  font-family $font
+  font-weight 400
+  background-color $bg
+  color $white
+  overflow-x hidden
+  background-image url("../img/icons/bg.svg")
+  background-repeat no-repeat
+  background-position top center
+  background-size cover
+
+main
+  flex 1 0 auto
+
+a
+  display inline-block
+  text-decoration none
+  color $white
+  outline none
+
+  &:focus-visible
+    outline solid
+
+p,
+span,
+ul,
+ol,
+li,
+input,
+textarea
+  font-family $font
+  color $text
+
+ul,
+li,
+ol
+  list-style none
+  padding 0
+  margin 0
+
+h1,
+h2,
+h3,
+h4
+  font-family $fontTitle
+  font-weight 500
+  margin 0
+  padding 0
+  color $title
+
+h1
+  font-size 5rem
+  line-height 6rem
+  font-weight 700
+
+h2
+  font-size 4rem
+  line-height 4.8rem
+
+h3
+  font-size 2rem
+
+h4
+  font-size 1.6rem
+
+button
+  border none
+  outline none
+  cursor pointer
+  background-color transparent
+  color $white
+  transition all 0.1s
+
+  &:focus-visible
+    outline solid
+
+.container
+  max-width 1150px
+  margin 0 auto
+  padding 0 15px
+
+.main
+  overflow hidden
+
+.scroll-block
+  overflow hidden
+
+.link-underline
+  position relative
+
+  &::after
+    position absolute
+    content ""
+    bottom 8px
+    right 0
+    height 2px
+    width 0
+    border-radius 5px
+    background linear-gradient(90deg, rgba(235, 30, 30, 0) 0%, rgba(235, 30, 30, 0.4962359943977591) 50%, rgba(235, 30, 30, 1) 100%)
+    transition width 0.3s
+
+  &:hover
+    &::after
+      width 100%
+      left 0
+
+.section-title,
+.section-title > span  
+  font-family $fontTitle
+  font-size 4.5rem
+  line-height 5.6rem
+  color $white
+
+@media (max-width 768px)
+  .header__button
+    .button
+      font-size 1.7rem !important
+      padding 1.5rem 2.5rem !important
+
+@media (max-width 650px)
+  .button
+    font-size 14px !important
+    padding 2rem 3rem !important

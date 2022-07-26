@@ -1,0 +1,71 @@
+@import "base/_global"
+@import "../includes/modules/accordion/index.styl"
+
+.intro
+  padding-top 184px
+  margin-bottom 75px
+
+.intro__inner
+  display flex
+  align-items center
+  justify-content space-between
+
+.intro__title
+  color $red
+  font-size 80px
+  line-height 1.3
+  margin-bottom 35px
+
+span
+  display block
+  font-size 45px
+
+.intro__message
+  font-weight 600
+  font-size 18px
+  line-height 34px
+  margin-bottom 45px
+
+.benefits
+  position relative
+  margin-bottom 128px
+
+  &::before
+    position absolute
+    top -25px
+    left -25px
+    right -25px
+    content ""
+    max-width 1120px
+    width 110%
+    margin 0 auto
+    min-height 160px
+    border 2px solid #EB1E1E
+    border-radius 24px
+    z-index -1
+
+.benefits__inner
+  display flex
+  align-items center
+  justify-content space-between
+  column-gap 20px
+  background rgba(255, 255, 255, 0.1)
+  backdrop-filter blur(40px)
+  border-radius 24px 24px 96px 24px
+  padding 32px 34px 32px 43px
+  max-width 1070px
+  margin 0 auto
+  z-index 1
+
+.benefits__item
+  display flex
+  align-items center
+
+  &-title
+    font-weight 700
+    font-size 16px
+    line-height 24px
+
+  
+
+@import "media/_media-landing.styl"

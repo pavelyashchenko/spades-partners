@@ -1,0 +1,64 @@
+extends ../includes/page
+
+include ../includes/modules/accordion/index
+
+block head
+  - var title = "Spades partners"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/landing.min.css")
+
+block scripts 
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+  script(src="scripts/landing.js")
+
+block main
+  section.intro#intro 
+    .container
+      .intro__inner
+        .intro__info.wow.fadeInLeft
+          .intro__title.section-title Quality 
+            span is our specialty
+          p.intro__message
+            | Join Spades Partners  program today and work with one of the best affiliates  in the online casino market.
+          .intro__button
+            +button(href="#")
+              | Become a partner
+
+        .intro__image
+          +picture({
+            lazy: false,
+            path: "img/intro/intro-img.png",
+            attr: { "alt": "NFT image" },
+            mainAttr: {
+              "class": "wow fadeInRight"
+              }
+          })
+
+  section.benefits#benefits
+    .container
+      .benefits__inner
+        .benefits__item 
+          .benefits__item-icon
+            img(src="img/benefits/Icon.png", alt="")
+          .benefits__item-title
+            | REGISTER ON A WEBSITE
+        .benefits__item 
+          .benefits__item-icon
+            img(src="img/benefits/Icon_2.png", alt="")
+          .benefits__item-title
+            | CREATE A PARTNER ACCOUNT
+        .benefits__item 
+          .benefits__item-icon
+            img(src="img/benefits/Icon_3.png", alt="")
+          .benefits__item-title
+            | START TO PROMOTE
+        .benefits__item 
+          .benefits__item-icon
+            img(src="img/benefits/Icon_4.png", alt="")
+          .benefits__item-title
+            | EARN LIFETIME REVENUE
+
+  +modal-connect()

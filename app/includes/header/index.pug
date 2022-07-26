@@ -1,0 +1,62 @@
+mixin header()
+  header.header
+    .header__desktop
+      .header__container
+        .header__left
+          a.header__logo(href="index.html")
+            img(src= "img/icons/logo.svg" alt="Logo")
+
+          nav.header__menu
+            ul.header__menu-ul
+              each key, value in {"About": 'about', "Why choose us": 'how-it-works', "Commissions": 'roadmap', "Our brands": 'contacts', "Contact": 'contacts'}
+                li.header__menu-li
+                  a.header__menu-link.link-underline(href=`index.html#${key}` )= value
+
+        .header__right
+          .header__button
+            a(href="#").header__login 
+              | Log in
+          .header__button
+            +button(href="#").header__signup
+              | Sign up
+
+    .header__mobile
+      .header__mobile-top
+        .header__left
+          a.header__logo(href="#")
+            img(src= "img/icons/logo.svg" alt="Logo")
+
+        .header__right
+          .header__burger-button
+            button
+              svg
+                defs
+                  filter#gooeyness
+                    fegaussianblur(in='SourceGraphic' stdDeviation='2.2' result='blur')
+                    fecolormatrix(in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10' result='gooeyness')
+                    fecomposite(in='SourceGraphic' in2='gooeyness' operator='atop')
+              button.plates
+                .plate.plate5(onclick="this.classList.toggle('active')")
+                  svg.burger(version='1.1' height='100' width='100' viewBox='0 0 100 100')
+                    path.line.line1(d='M 30,35 H 70 ')
+                    path.line.line2(d='M 50,50 H 30 L 34,32')
+                    path.line.line3(d='M 50,50 H 70 L 66,68')
+                    path.line.line4(d='M 30,65 H 70 ')
+                  svg.x(version='1.1' height='100' width='100' viewBox='0 0 100 100')
+                    path.line(d='M 34,32 L 66,68')
+                    path.line(d='M 66,32 L 34,68')
+
+      .header__mobile-inner
+        nav.header__menu
+          ul.header__menu-ul
+            each key, value in {"About": 'about', "Why choose us": 'how-it-works', "Commissions": 'roadmap', "Our brands": 'contacts', "Contact": 'contacts'}
+              li.header__menu-li
+                a.header__menu-link(href=`index.html#${key}` )= value
+
+          .header__menu-buttons
+            +button(href="#").button--bordered
+              | Log In
+            +button(href="#")
+              | Sign up
+
+        
