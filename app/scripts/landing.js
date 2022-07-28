@@ -86,15 +86,38 @@ const Accordion = () => {
 (function () {
 	// swiper slider
 	var swiper = new Swiper('#reviewSlider', {
-		slidesPerView: 3,
+		slidesPerView: 1,
 		spaceBetween: 50,
-		allowTouchMove: false,
+		allowTouchMove: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			580: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+				allowTouchMove: false,
+			}
+		},
+	});
+
+	var swiper2 = new Swiper("#whySlider", {
+		pagination: {
+			el: ".swiper-fraction",
+			type: "fraction",
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
 		},
 	});
 
 	// Functions init
 	Accordion();
 })();
+

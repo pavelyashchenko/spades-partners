@@ -147,7 +147,7 @@ button
       left 0
 
 .section-title,
-.section-title > span
+.section-title span
   font-family $fontTitle
   font-size 4.5rem
   line-height 5.6rem
@@ -170,12 +170,10 @@ button
       background-size contain
 
 @media (max-width 768px)
+  body
+    background-size auto
+
   .header__button
     .button
       font-size 1.7rem !important
       padding 1.5rem 2.5rem !important
-
-@media (max-width 650px)
-  .button
-    font-size 14px !important
-    padding 2rem 3rem !important
