@@ -66,6 +66,385 @@ span
     font-size 16px
     line-height 24px
 
-  
+.about
+  background-image url("../img/about/coins.png")
+  background-repeat no-repeat
+  background-position -90px -20px
+
+.about__inner
+  text-align center
+  margin-bottom 64px
+
+.about__title
+  max-width 645px
+  margin-bottom 10px
+  margin 0 auto
+  font-weight 400
+  font-size 64px
+  line-height 99px
+
+  .title-span
+    font-weight 400
+    font-size 64px
+    line-height 99px
+
+.about__message
+  max-width 762px
+  margin 0 auto
+  font-weight 600
+  font-size 18px
+  line-height 34px
+
+.about__items
+  display flex
+  align-items center
+  justify-content space-between
+  column-gap 50px
+
+.about__item
+  position relative
+  width 33%
+  background linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 194.12%)
+  border-radius 24px 24px 96px 24px
+  padding 45px 20px 95px
+  font-weight 400
+  font-size 16px
+  line-height 30px
+  text-align center
+  border-right 2px solid rgba(255, 255, 255, 0.05)
+
+  &::before
+    position absolute
+    top -20px
+    left -20px
+    content ""
+    width 110%
+    height 100%
+    background linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 194.12%)
+    backdrop-filter blur(40px)
+    border-radius 24px
+    z-index -1
+
+.partner
+  margin-bottom 188px
+
+.partner__inner
+  display flex
+  align-items flex-start
+  justify-content space-between
+  column-gap 24px
+  margin-bottom 64px
+  padding-top 330px
+  background-image url("../img/icons/Pattern.svg"), url("../img/partner/Spades.png")
+  background-repeat no-repeat
+  background-position 100px 120px, 570px 60px
+
+.partner__item
+  width 24%
+  text-align center
+
+.partner__icon
+  max-height 120px
+  margin-bottom 40px
+
+  img
+    height 100%
+
+.partner__title
+  position relative
+  font-weight 600
+  font-size 20px
+  line-height 30px
+  font-family $font
+  margin-bottom 46px
+
+  &::after
+    position absolute
+    left 50%
+    bottom -15px
+    transform translateX(-50%) matrix(-1, 0, 0, 1, 0, 0)
+    content ""
+    width 30%
+    height 2px
+    background linear-gradient(270deg, rgba(235, 30, 30, 0) 0%, #EB1E1E 100%)
+    border-radius 19px
+
+.partner__message
+  font-weight 400
+  font-size 16px
+  line-height 30px
+  max-width 222px
+  margin 0 auto
+
+.partner__button
+  text-align center
+
+.why
+  background-image url("../img/why/Pattern.svg")
+  background-repeat no-repeat
+  background-position 0 0
+  margin-bottom 200px
+
+.why__title
+  font-weight 400
+  font-size 60px
+  line-height 72px
+  margin-bottom 100px
+
+  span
+    display inline
+    font-size 60px
+    line-height 72px
+    color $red
+
+.why__wrapper
+  display flex
+  align-items flex-start
+  justify-content space-between
+  column-gap 20px
+  background-image url("../img/icons/Pattern.svg")
+  background-repeat no-repeat
+  padding-bottom 50px
+  background-position 100% 100%
+
+.why__items
+  display flex
+  align-items flex-start
+  flex-wrap wrap
+  gap 50px 20px
+  width 60%
+
+.why__item
+  width 45%
+
+.why__icon
+  max-height 100px
+  margin-bottom 20px
+
+  img
+    height 100%
+
+h4.why__title
+  position relative
+  font-weight 600
+  font-size 20px
+  line-height 30px
+  font-family $font
+  margin-bottom 46px
+
+  &::after
+    position absolute
+    left 0
+    bottom -15px
+    transform matrix(-1, 0, 0, 1, 0, 0)
+    content ""
+    width 30%
+    height 2px
+    background linear-gradient(270deg, rgba(235, 30, 30, 0) 0%, #EB1E1E 100%)
+    border-radius 19px
+
+.why__message
+  font-weight 400
+  font-size 16px
+  line-height 30px
+
+.why__info
+  width 40%
+
+.why__img
+  margin-bottom 50px
+
+  img
+    width 100%
+    transform scale(1.3)
+
+.why__button
+  text-align center
+
+.brand
+  margin-bottom 250px
+
+.brand__title,
+.brand__title span
+  text-align center
+  font-weight 400
+  font-size 64px
+  line-height 77px
+  margin-bottom 130px
+
+.brand__wrapper
+  display flex
+  align-items center
+  column-gap 50px
+
+.brand__img
+  width 50%
+
+  img
+    max-width 100%
+
+.brand__info
+  width 50%
+
+  &-message
+    position relative
+    font-weight 400
+    font-size 16px
+    line-height 30px
+    margin-bottom 50px
+    background linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 194.12%)
+    border-radius 24px 24px 96px 24px
+    padding 45px 20px
+    border-right 2px solid rgba(255, 255, 255, 0.05)
+
+    &::before
+      position absolute
+      top -20px
+      left -20px
+      content ""
+      width 110%
+      height 100%
+      background linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 194.12%)
+      backdrop-filter blur(40px)
+      border-radius 24px
+      z-index -1
+
+.brand__button
+  text-align center
+
+.review
+  margin-bottom 75px
+
+.review__inner
+  background-image url("../img/partner/Spades.png")
+  background-repeat no-repeat
+  background-size contain
+
+.review__title,
+.review__title span
+  text-align center
+  font-weight 400
+  font-size 64px
+  line-height 77px
+  margin-bottom 120px
+
+  .title-span
+    &::after
+      height 62px
+      bottom -70px
+      width 100%
+
+.review__slider
+  padding-bottom 150px
+  background-image url("../img/icons/Pattern.svg")
+  background-repeat no-repeat
+  background-position 10% 100%
+
+.swiper
+  overflow visible
+
+.review__slide
+  background linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 194.12%)
+  border-radius 24px 24px 96px 24px
+  padding 45px 20px
+  border-right 2px solid rgba(255, 255, 255, 0.05)
+  z-index 1
+
+  &-title
+    font-weight 600
+    font-size 20px
+    line-height 30px
+
+  &-rating
+    text-align center
+    margin-bottom 29px
+
+  &-name
+    font-weight 600
+    font-size 18px
+    line-height 24px
+    margin-bottom 5px
+
+  &-position
+    font-weight 500
+    font-size 16px
+    line-height 24px
+
+.review__slide-bg
+  position relative
+  height 356px
+  width 300px
+  display flex
+  flex-direction column
+  align-items center
+  justify-content space-between
+  text-align center
+
+  &::before
+    position absolute
+    top -20px
+    left -30px
+    content ""
+    width 370px
+    height 405px
+    background linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 194.12%)
+    backdrop-filter blur(40px)
+    border-radius 24px
+    z-index -1
+
+.swiper-button-wrapper
+  display flex
+  align-items center
+  justify-content center
+  gap 50px
+  margin-top 67px
+  height 42px
+  background-image url("../img/review/circles.svg")
+  background-repeat no-repeat
+  background-position center
+
+.swiper-button-next,
+.swiper-button-prev
+  position static
+  background-repeat no-repeat
+  height 16px
+  width 40px
+  margin-top unset
+
+  &::after
+    content ""
+
+.swiper-button-prev
+  background-image url("../img/icons/prev.svg")
+
+.swiper-button-next
+  background-image url("../img/icons/next.svg")
+
+.faq
+  margin-bottom 150px
+
+.faq__title
+  font-weight 400
+  font-size 64px
+  line-height 77px
+  text-align center
+  margin-bottom 67px
+
+.contact
+  margin-bottom 200px
+
+.contact__title
+  text-align center
+  margin-bottom 100px
+
+  span
+    display inline
+    font-weight 400
+    font-size 64px
+    line-height 77px
+
+.contact__main .button
+  max-width 456px
+  width 100%
 
 @import "media/_media-landing.styl"

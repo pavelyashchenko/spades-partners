@@ -85,15 +85,15 @@ const Accordion = () => {
 
 (function () {
 	// swiper slider
-	// var swiper = new Swiper('#roadmapSlider', {
-	// 	slidesPerView: 1,
-	// 	speed: 1000,
-	// 	allowTouchMove: false,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-	// });
+	var swiper = new Swiper('#reviewSlider', {
+		slidesPerView: 3,
+		spaceBetween: 50,
+		allowTouchMove: false,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 
 	// Functions init
 	Accordion();

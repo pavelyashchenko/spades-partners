@@ -1,0 +1,51 @@
+.contact-form
+  max-width 637px
+  margin 0 auto
+  background rgba(235, 30, 30, 0.2)
+  backdrop-filter blur(40px)
+  border-radius 24px
+  padding 20px 20px 30px 20px
+  text-align center
+
+  &-title
+    font-family $font
+    text-align center
+    font-weight 600
+    font-size 24px
+    line-height 29px
+    margin-bottom 35px
+
+  &-wrapper
+    border-radius 24px 24px 96px 24px
+    padding 50px 72px 72px 72px
+    background-color $red
+    background-image url("../img/contact/form-bg.svg")
+    background-repeat no-repeat
+    background-size cover
+    margin-bottom 30px
+
+.form-control
+  display block
+  width 100%
+  background-color $white
+  box-shadow inset 0px 4px 4px rgba(19, 26, 32, 0.1)
+  border-radius 16px
+  border none
+  font-weight 600
+  font-size 14px
+  line-height 24px
+  padding 20px 25px
+  margin-bottom 20px
+  color $bg
+
+  &::placeholder
+    font-weight 600
+    font-size 14px
+    line-height 24px
+    text-transform uppercase
+    color $bg
+    opacity 0.5
+
+  &--textarea
+    resize none
+    min-height 128px

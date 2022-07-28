@@ -2,18 +2,19 @@
   text-align left
   margin-bottom 4rem
 
-ul[role="tablist"]
-  display flex
-  align-items center
-  flex-wrap wrap
-
 .accordion__title
   font-size 16px
   line-height 24px
   letter-spacing 0.01em
-  color $text
+  color $white
+  opacity 0.7
   display block
+  padding 25px 42px
   position relative
+  background rgba(255, 255, 255, 0.05)
+  border 2px solid rgba(255, 255, 255, 0.1)
+  backdrop-filter blur(40px)
+  border-radius 24px
 
   &:hover
     text-decoration none
@@ -21,8 +22,35 @@ ul[role="tablist"]
   .accordion__title-decoration
     display none
 
+  &::after,
+  &::before
+    content ""
+    position absolute
+    top 50%
+    background-color $white
+    transition transform 0.17s ease-in-out
+    will-change transform
+
+  &::after
+    margin-top -8px
+    right 50px
+    width 2px
+    height 14px
+
+  &::before
+    margin-top -2px
+    right 44px
+    width 14px
+    height 2px
+
   &[aria-selected="true"]
     opacity 1
+
+    &::before
+      transform rotate(180deg)
+
+    &::after
+      transform rotate(90deg)
 
 .accordion__title h3
   position relative
@@ -32,12 +60,20 @@ ul[role="tablist"]
   line-height 3rem
 
 .accordion__item
-  max-width 25%
-  padding 19px 15px 25px 25px
+  margin-bottom 10px
+  background-image none
   transition margin 0.2s
 
+  &:last-child
+    margin-bottom 0
+
   &.is-active
-    background radial-gradient(145.16% 113.2% at -3.45% -2.44%, #0057FF 0.09%, rgba(55, 48, 135, 0.8) 38.29%, rgba(31, 22, 53, 0.4) 71.54%, rgba(35, 23, 47, 0) 99.48%, rgba(30, 21, 48, 0) 99.49%)
+    .accordion__title
+      background-image url("../img/faq/active-bg.svg")
+      background-repeat no-repeat
+      background-size cover
+      background-position top center
+      border-color transparent
 
     &:last-child
       margin-bottom 0
@@ -50,9 +86,9 @@ ul[role="tablist"]
   font-weight 300
   font-size 1.4rem
   line-height 1.5
-  padding 12px 0 6px 0
-  max-width 600px
-  margin-right 20px
+  padding 30px
+  max-width 1038px
+  margin 0 auto
 
   p:last-child
     margin-bottom 0
@@ -62,16 +98,10 @@ ul[role="tablist"]
     margin-top 12px
     margin-bottom 12px
 
-.faq__hidden-blocks
-  display flex
-
 @media (max-width 768px)
   .accordion__title
     h3
-      font-size 18px
+      font-size 16px
 
   .accordion__body
-    font-size 14px
-
-  .accordion__item
-    max-width 100%
+    font-size 12px

@@ -1,15 +1,15 @@
 .footer
-  background-color $bg
   flex-shrink 0
+  padding-bottom 100px
 
 .footer__inner
   display flex
-  align-items center
+  align-items flex-start
   justify-content space-between
+  column-gap 50px
 
 .footer__left
-  max-width 250px
-  margin-right 5rem
+  max-width 404px
 
 .footer__logo
   margin-bottom 2rem
@@ -18,102 +18,81 @@
   max-width 100%
   width 200px
 
-.footer__info
-  img
-    width 100%
+.footer__desription
+  font-weight 500
+  font-size 16px
+  line-height 30px
+  color $text
+  opacity 0.6
+  margin-bottom 30px
 
-.footer__icons
-  display flex 
-  align-items center
-  justify-content space-between
-
-  &-item
-    display block
-    transition all 0.3s
-    width 25px
-    height 25px
-
-    img
-      width 100%
-
-    &:not(:first-child)
-      margin-left 1rem
-
-    &:hover
-      transform scale(1.2)
+  &:last-child
+    margin-bottom 0
 
 .footer__menu
-  max-width 500px
+  max-width 548px
   width 100%
-
-.footer__right
-  display flex
-  align-items center
-  justify-content space-between
-
-.footer__follow
-  font-weight 300
-  font-size 1.6rem
-  line-height 1.9rem
-  white-space nowrap
-  margin-right 10px
 
 .footer__nav
   display flex
   align-items flex-start
   justify-content space-between
+  column-gap 20px
 
-  &-ul
-    width 30%
+.footer__menu-li
+  font-weight 600
+  font-size 16px
+  line-height 30px
+  color $text
+  opacity 0.5
+  margin-bottom 15px
 
-  &-li
-    margin-bottom 0.5rem
+  &--title
+    opacity 1
 
-  &-link
-    font-weight 300
-    font-size 1.4rem
-    line-height 2
-    color $white
-    transition color 0.3s
+  &:last-child
+    margin-bottom 0
+
+.footer__menu-link
+  &:hover
+    text-decoration underline
+
+.footer__menu-right
+  .footer__menu-ul
+    &:first-child
+      margin-bottom 70px
+
+    &:last-child
+      margin-bottom 50px
+
+.footer__icons
+  display flex
+  align-items center
+  justify-content flex-end
+
+  &-item
+    display block
+    transition all 0.3s
+    width 50px
+    height 50px
+
+    img
+      width 100%
+
+    &:not(:first-child)
+      margin-left 2rem
 
     &:hover
-      color $green
+      transform scale(1.2)
 
 @media (max-width 1024px)
   .footer__menu
-    &-ul
-      width 80px
+    max-width 435px
 
-  .footer__center
-    max-width 380px
 
 @media (max-width 768px)
   .footer__logo img
     width 160px
-
-  .footer__menu
-    flex-wrap wrap
-
-    &-ul
-      width 50%
-
-    &-link
-      font-size 14px
-
-  .footer__info
-    font-size 14px
-    line-height 1.5
-
-  .footer__center
-    max-width 200px
-
-  .footer__follow
-    font-size 16px
-    line-height 19px
-    margin-right 12px
-
-  .footer__icons-item:not(:first-child)
-    margin-left 1rem
 
 @media (max-width 650px)
   .footer__inner
@@ -123,26 +102,20 @@
   .footer__left
     order 2
     margin-right 0
-
-  .footer__center
-    max-width 100%
-    margin-bottom 40px
-
-  .footer__menu-ul
-    width 25%
-
-  .footer__right
     margin-bottom 50px
 
-  .footer__logo img
-    width 120px
+@media (max-width 455px)
+  .footer__nav
+    display block
+
+  .footer__menu-ul
+    margin-bottom 30px
+
+  .footer__menu-right
+    .footer__menu-ul
+      &:first-child
+        margin-bottom 30px
 
 @media (max-width 425px)
   .footer__menu
     flex-wrap wrap
-
-    &-ul
-      width 50%
-
-      &:nth-child(-n+2)
-        margin-bottom 20px

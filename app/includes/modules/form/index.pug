@@ -1,0 +1,111 @@
+mixin form(attributes)
+  form#contact-form.form.contact-form&attributes(attributes)
+    block
+
+mixin input-name(text)
+  .form__item
+    input(
+      aria-label=(text=text)
+      name="first_name"
+      type="text"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--first-name
+
+mixin input-email(text)
+  .form__item
+    input(
+      aria-label=(text=text)
+      name="email"
+      type="email"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--first-email
+
+mixin input-phone(text)
+  .form__item
+    input(
+      aria-label=(text=text)
+      name="phone"
+      type="text"
+      required
+      placeholder=(text=text)
+      minlenght="5"
+      maxlenght="255"
+      data-parsley-pattern="[0-9 ()+-.]+"
+      data-parsley-required-message="Please enter your phone number"
+    ).form-control.form-control--phone
+
+mixin input-password(text)
+  .form__item
+    input(
+      name="password"
+      type="password"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--password
+
+mixin input-password-confirm(text)
+  .form__item
+    input(
+      name="password-confirm"
+      type="password"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--password-confirm
+
+mixin input-code(text)
+  .form__item
+    input(
+      aria-label=(text=text)
+      name="code"
+      type="text"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--code
+
+mixin input-company(text)
+  .form__item
+    input(
+      aria-label=(text=text)
+      name="cpmpany"
+      type="text"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--company
+
+mixin input-nickname(text)
+  .form__item
+    input(
+      aria-label=(text=text)
+      name="nickname"
+      type="text"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--nickname
+
+mixin input-full-name(text)
+  .form__item
+    input(
+      aria-label=(text=text)
+      name="full-name"
+      type="text"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--full-name
+
+mixin input-textarea(text, attributes)
+  .form__item&attributes(attributes)
+    textarea(
+      maxlength="1000"
+      name="questions"
+      placeholder=(text=text)
+    ).form-control.form-control--textarea

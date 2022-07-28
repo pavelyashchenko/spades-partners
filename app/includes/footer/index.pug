@@ -13,29 +13,37 @@ mixin footer()
         .footer__menu
           nav.footer__nav
             ul.footer__menu-ul
+              li.footer__menu-li.footer__menu-li--title Home
               li.footer__menu-li
-                a.footer__menu-link(href="index.html#about") About Us
+                a.footer__menu-link(href="index.html#pass") Comissions
               li.footer__menu-li
-                a.footer__menu-link(href="index.html#pass") Aura Pass
-            ul.footer__menu-ul
+                a.footer__menu-link(href="index.html#pass") Brands
               li.footer__menu-li
-                a.footer__menu-link(href="index.html#how-it-works") How it works
+                a.footer__menu-link(href="index.html#pass") Testimonials
               li.footer__menu-li
-                a.footer__menu-link(href="index.html#benefits") Benefits
-            ul.footer__menu-ul
+                a.footer__menu-link(href="index.html#pass") Why us
               li.footer__menu-li
-                a.footer__menu-link(href="index.html#roadmap") Roadmap
-              li.footer__menu-li
-                a.footer__menu-link(href="index.html#levels") Levels
-            ul.footer__menu-ul
-              li.footer__menu-li
-                a.footer__menu-link(href="index.html#team") Contacts
-              li.footer__menu-li
-                a.footer__menu-link(href="index.html#faq") FAQ
+                a.footer__menu-link(href="index.html#pass") FAQ
+            
+            .footer__menu-right
+              ul.footer__menu-ul
+                li.footer__menu-li.footer__menu-li--title Information
+                li.footer__menu-li
+                  a.footer__menu-link(href="index.html#pass") Terms and Conditions
+                li.footer__menu-li
+                  a.footer__menu-link(href="index.html#pass") Privacy Policy
+                li.footer__menu-li
+                  a.footer__menu-link(href="index.html#pass") About us
 
-          .footer__socials
-            span.footer__follow Follow Us:
-            .footer__icons
-              each key, value in {'img/icons/footer-twitter.svg': 'Twitter', 'img/icons/footer-post.svg': 'Post', 'img/icons/footer-telegram.svg': 'Telegram', 'img/icons/footer-discord.svg': 'Discord'}
-                a.footer__icons-item(href="#" target="_blank")
-                  img(src=value, alt=key)
+              ul.footer__menu-ul
+                li.footer__menu-li.footer__menu-li--title Contacts
+                li.footer__menu-li
+                  a.footer__menu-link(href="index.html#pass") Contact Us
+                li.footer__menu-li
+                  a.footer__menu-link(href="mailto:cooperation@spadespartners.com") cooperation@spadespartners.com
+
+      .footer__socials
+        .footer__icons
+          each key, value in {'img/icons/Facebook.svg': 'Facebook', 'img/icons/Instagram.svg': 'Instagram', 'img/icons/Linkedin.svg': 'Linkedin', 'img/icons/Twitter.svg': 'Twitter', 'img/icons/Youtube.svg': 'Youtube'}
+            a.footer__icons-item(href="#" target="_blank")
+              img(src=value, alt=key)

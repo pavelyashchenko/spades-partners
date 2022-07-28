@@ -1,6 +1,7 @@
 extends ../includes/page
 
 include ../includes/modules/accordion/index
+include ../includes/modules/form/index
 
 block head
   - var title = "Spades partners"
@@ -60,5 +61,221 @@ block main
             img(src="img/benefits/Icon_4.png", alt="")
           .benefits__item-title
             | EARN LIFETIME REVENUE
+
+  section.about#about
+    .container
+      .about__inner 
+        h2.about__title.section-title
+          span.title-span About 
+          |  Spades partners
+        p.about__message
+          | Join our affiliate program and enjoy the benefits of working with real professionals.
+
+      .about__items
+        .about__item
+          p.about__item-message
+            | We offer outstanding gambling experience and turn it into the best deal for every player, full of winning opportunities and fair outcomes. It will help you achieve the desired results in a short time.
+        .about__item
+          p.about__item-message
+            | Our experienced account managers are always ready to help you generate a substantial income. They can serve our clients in various languages and help increase their profits.
+        .about__item
+          p.about__item-message
+            | We work with the most popular suppliers within the gaming industry to bring the latest online casino games, which make our gambling affiliate program stand out. Don’t waste another minute, come and join us!
+
+  section.partner#partner
+    .container
+      .partner__inner
+        .partner__item
+          .partner__icon 
+            img(src="img/partner/Icon.png", alt="")
+          h4.partner__title International<br> brand
+          p.partner__message
+            | Spades Partners is a stable and quickly growing company. We are officially licenced and a reliable partner.
+        .partner__item
+          .partner__icon 
+            img(src="img/partner/Icon-1.png", alt="")
+          h4.partner__title Super Smart<br> Search
+          p.partner__message
+            | Revenue share, Hybrid and CPA deals. Personally tailored proposals to meet your needs.
+        .partner__item
+          .partner__icon 
+            img(src="img/partner/Icon-2.png", alt="")
+          h4.partner__title Control everything<br> in one place
+          p.partner__message
+            | Our retention team makes sure you get the most of your traffic!
+        .partner__item
+          .partner__icon 
+            img(src="img/partner/Icon-3.png", alt="")
+          h4.partner__title Work better<br> together
+          p.partner__message
+            | Fast and respectful. Always ready to provide you with top-notch assets and marketing data.
+      
+      .partner__button
+        +button(href="#")
+          | Become a partner
+
+  section.why
+    .container
+      .why__inner
+        h2.why__title.section-title Why 
+          span Spades<br>
+          span.title-span partners
+        .why__wrapper
+          .why__items
+            .why__item
+              .why__icon
+                img(src="img/why/icon1.png", alt="")
+              h4.why__title Payment<br>methods
+              p.why__message
+                | Various payment methods for withdrawals in fiat or crypto currencies. Bank transfer, Neteller, Skrill, CoinsPaid.
+            .why__item
+              .why__icon
+                img(src="img/why/icon2.png", alt="")
+              h4.why__title Personal<br>manager
+              p.why__message
+                | Every partner is assigned a personal manager to help with anything that might come up.
+            .why__item
+              .why__icon
+                img(src="img/why/icon3.png", alt="")
+              h4.why__title Player<br>retention
+              p.why__message
+                | High conversion rates. Loyalty system & multiple bonus programs. Support and  VIP service.
+            .why__item
+              .why__icon
+                img(src="img/why/icon4.png", alt="")
+              h4.why__title True<br>partnership
+              p.why__message
+                | No negative carry over, no hidden fees, no withdrawal commissions, no bundling between brands.
+
+          .why__info
+            .why__img
+              +picture({
+                lazy: false,
+                path: "img/why/BG.png",
+                attr: { "alt": "BG" },
+                mainAttr: {
+                  "class": "wow fadeInRight"
+                  }
+              })
+            .why__button 
+              +button(href="#").button--bordered
+                | Terms & conditions
+
+  section.brand#brand
+    .container
+      .brand__inner
+        h2.brand__title.section-title Our 
+          span.title-span Brands
+
+      .brand__wrapper
+        .brand__img
+          +picture({
+            lazy: false,
+            path: "img/brand/Spades.png",
+            attr: { "alt": "Spades" },
+            mainAttr: {
+              "class": "wow fadeInLeft"
+              }
+          })
+        .brand__info
+          .brand__info-title
+            img(src="img/brand/Sloterra_Casino.svg", alt="Sloterra Casino")
+          p.brand__info-message
+            | Beautifully-designed adventure-themed online casino that has got everything you may be looking for as a gambler. There are generous promotions, a VIP club, efficient support , varied payment methods with no fees to worry about, and surely, an incredible choice of games, including top slots and incredibly realistic live dealer games by the finest providers, the choice is always enjoyable though. All that in total security ensured by a Curacao licence held by only the most determined and solid casinos out there. Say YES to new adventures!
+          .brand__button
+            +button(href="#").button--bordered
+              | Become a partner
+
+  section.review#review
+    .container
+      .review__inner
+         h2.review__title.section-title What people<br>
+          span.title-span are saying
+      .review__slider
+        .swiper#reviewSlider
+          .swiper-wrapper
+            .swiper-slide
+              .review__slide
+                .review__slide-bg
+                  .review__slide-title
+                    | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+                  .review__slide-info
+                    .review__slide-rating
+                      img(src="img/review/stars-5.svg", alt="")
+                    .review__slide-name Rivaan Mona
+                    .review__slide-position GS Partners
+
+            .swiper-slide
+              .review__slide
+                .review__slide-bg
+                  .review__slide-title
+                    | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+                  .review__slide-info
+                    .review__slide-rating
+                      img(src="img/review/stars-3.svg", alt="")
+                    .review__slide-name Rivaan Mona
+                    .review__slide-position GS Partners
+              
+            .swiper-slide
+              .review__slide
+                .review__slide-bg
+                  .review__slide-title
+                    | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+                  .review__slide-info
+                    .review__slide-rating
+                      img(src="img/review/stars-4.svg", alt="")
+                    .review__slide-name Rivaan Mona
+                    .review__slide-position GS Partners
+
+            .swiper-slide
+              .review__slide
+                .review__slide-bg
+                  .review__slide-title
+                    | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+                  .review__slide-info
+                    .review__slide-rating
+                      img(src="img/review/stars-5.svg", alt="")
+                    .review__slide-name Rivaan Mona
+                    .review__slide-position GS Partners            
+
+          .swiper-button-wrapper
+            .swiper-button-prev
+            .swiper-button-next
+
+  section.faq#faq
+    .container 
+      .faq__inner
+        .faq__title.section-title
+          span.title-span FAQ
+
+      +accordion()
+        +accordion-item("<h3>What is an affiliate program?</h3>")
+          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
+        +accordion-item("<h3>What is an affiliate program?</h3>")
+          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
+        +accordion-item("<h3>What is an affiliate program?</h3>")
+          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
+        +accordion-item("<h3>What is an affiliate program?</h3>")
+          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
+        +accordion-item("<h3>What is an affiliate program?</h3>")
+          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
+
+  section.contact#contact
+    .container 
+      .contact__inner
+        h2.contact__title.section-title
+          span.title-span Contact 
+          span us
+
+      .contact__main
+        +form
+          .contact-form-wrapper
+            h3.contact-form-title Let's get partnered!
+            +input-name("NAME")
+            +input-email("EMAIL")
+            +input-phone("PHONE")
+            +input-textarea("MESSAGE")
+          +button(type="submit")
+            | Send
 
   +modal-connect()

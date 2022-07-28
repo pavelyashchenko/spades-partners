@@ -2,7 +2,7 @@
 
 @font-face
   font-family "MonumentExtended-Regular"
-  src url("fonts/MonumentExtended-Regular.woff2") format("woff2"), url("../fonts/MonumentExtended-Regular.woff") format("woff")
+  src url("../fonts/MonumentExtended-Regular.woff2") format("woff2"), url("../fonts/MonumentExtended-Regular.woff") format("woff")
   font-weight normal
   font-style normal
   font-display swap
@@ -13,6 +13,7 @@ $fontTitle = "MonumentExtended-Regular", sans-serif
 @import "_vars"
 @import "../includes/header/index.styl"
 @import "../includes/footer/index.styl"
+@import "../includes/modules/form/index.styl"
 @import "../includes/modules/button/index.styl"
 @import "../includes/modules/pictures/index.styl"
 @import "../includes/modules/modals/index.styl"
@@ -146,11 +147,27 @@ button
       left 0
 
 .section-title,
-.section-title > span  
+.section-title > span
   font-family $fontTitle
   font-size 4.5rem
   line-height 5.6rem
   color $white
+
+  .title-span
+    display inline
+    position relative
+    color $red
+
+    &::after
+      position absolute
+      left 0
+      bottom -30px
+      content ""
+      width 90%
+      height 38px
+      background-image url("../img/icons/title-line.svg")
+      background-repeat no-repeat
+      background-size contain
 
 @media (max-width 768px)
   .header__button
