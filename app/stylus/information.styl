@@ -1,0 +1,70 @@
+@import "base/_global"
+
+.information
+  margin-bottom 120px
+  padding-top 200px
+
+.title
+  position relative
+  font-weight 400
+  font-size 64px
+  line-height 77px
+  color $red
+  text-align center
+  margin-bottom 155px
+
+  &::after
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    bottom -130px
+    content ""
+    width 80%
+    height 120px
+    background-image url("../img/icons/title-line-white.svg")
+    background-repeat no-repeat
+    background-size contain
+
+.title-medium
+  font-family $font
+  font-weight 600
+  font-size 24px
+  line-height 30px
+  color $white
+  margin-bottom 35px
+
+.title-small
+  font-family $font
+  font-weight 600
+  font-size 16px
+  line-height 30px
+  color $text
+  margin-bottom 35px
+
+.text
+  font-weight 400
+  font-size 16px
+  line-height 30px
+  color #FBD4D4
+  margin-bottom 20px
+
+  &--last
+    margin-bottom 35px
+
+@media (max-width 768px)
+  .information
+    padding-top 100px
+  
+  .title
+    font-size 46px
+    line-height 60px
+    margin-bottom 100px
+
+    &::after
+      width 50%
+
+@media (max-width 475px)
+  .title
+    font-size 34px
+    line-height 50px
+    margin-bottom 70px

@@ -8,16 +8,16 @@ mixin header()
 
           nav.header__menu
             ul.header__menu-ul
-              each key, value in {"About": 'about', "Why choose us": 'how-it-works', "Commissions": 'roadmap', "Our brands": 'contacts', "Contact": 'contacts'}
+              each key, value in {"About": 'about', "Why choose us": 'about', "Commissions": 'contact', "Our brands": '', "Contact": 'contact'}
                 li.header__menu-li
                   a.header__menu-link.link-underline(href=`index.html#${key}` )= value
 
         .header__right
           .header__button
-            a(href="#").header__login 
+            a(href="#" data-izimodal-open="#modal-login").header__login 
               | Log in
           .header__button
-            +button(href="#").header__signup
+            +button(href="#" data-izimodal-open="#modal-signup").header__signup
               | Sign up
 
     .header__mobile
@@ -54,9 +54,9 @@ mixin header()
                 a.header__menu-link(href=`index.html#${key}` )= value
 
           .header__menu-buttons
-            +button(href="#").button--bordered
+            +button(href="#" data-izimodal-open="#modal-login").button--bordered
               | Log In
-            +button(href="#")
+            +button(href="#" data-izimodal-open="#modal-signup")
               | Sign up
 
         

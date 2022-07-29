@@ -25,7 +25,7 @@ block main
           p.intro__message
             | Join Spades Partners  program today and work with one of the best affiliates  in the online casino market.
           .intro__button
-            +button(href="#")
+            +button(href="#" data-izimodal-open="#modal-signup")
               | Become a partner
 
         .intro__image
@@ -111,10 +111,10 @@ block main
             | Fast and respectful. Always ready to provide you with top-notch assets and marketing data.
       
       .partner__button
-        +button(href="#")
+        +button(href="#" data-izimodal-open="#modal-signup")
           | Become a partner
 
-  section.why
+  section.why#why
     .container
       .why__inner
         h2.why__title.section-title Why 
@@ -198,7 +198,7 @@ block main
                   }
               })
             .why__button 
-              +button(href="#").button--bordered
+              +button(href="/terms.html" target="_blank").button--bordered
                 | Terms & conditions
 
   section.brand#brand
@@ -223,8 +223,8 @@ block main
           p.brand__info-message
             | Beautifully-designed adventure-themed online casino that has got everything you may be looking for as a gambler. There are generous promotions, a VIP club, efficient support , varied payment methods with no fees to worry about, and surely, an incredible choice of games, including top slots and incredibly realistic live dealer games by the finest providers, the choice is always enjoyable though. All that in total security ensured by a Curacao licence held by only the most determined and solid casinos out there. Say YES to new adventures!
           .brand__button
-            +button(href="#").button--bordered
-              | Become a partner
+            +button(href="www.sloterra.com" target="_blank").button--bordered
+              | Visit casino
 
   section.review#review
     .container
@@ -308,7 +308,7 @@ block main
           span us
 
       .contact__main
-        +form
+        +form.contact-form--main
           .contact-form-wrapper
             h3.contact-form-title Let's get partnered!
             +input-name("NAME")
@@ -317,5 +317,3 @@ block main
             +input-textarea("MESSAGE")
           +button(type="submit")
             | Send
-
-  +modal-connect()

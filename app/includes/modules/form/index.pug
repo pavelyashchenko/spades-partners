@@ -102,6 +102,20 @@ mixin input-full-name(text)
       maxlenght="255"
     ).form-control.form-control--full-name
 
+mixin input-checkbox(text, name, legend)
+  -
+    var id = name.id || "";
+
+  .form__item.form__item--checkbox
+    fieldset.checkbox
+      legend
+        span.accessibility-hidden-content
+          | !{legend}
+      input.custom-checkbox(id= id name="checkbox" type="checkbox")
+      label.form-control--checkbox-btn(for= id)
+        span.check-icon
+        | !{text}
+
 mixin input-textarea(text, attributes)
   .form__item&attributes(attributes)
     textarea(

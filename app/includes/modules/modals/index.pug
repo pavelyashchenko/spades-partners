@@ -1,59 +1,46 @@
-mixin modal-connect(data) 
-  .modal.modal-connect#modal-connect
+mixin modal-login(data) 
+  .modal.modal-connect#modal-login
     button.modal-close(data-izimodal-close="")
       img(src="img/modals/modal-close-icon.svg", alt="Close")
-    .modal-connect-inner
-      h2.modal-connect-image
-        img(src="img/modals/metamask-modal.png", alt="Metamask Picture")
-      
-      .modal-connect-button
-        +button(type="button").button--red-filled
-          | Connect Wallet
+    .modal-login-inner
+      +form
+        h3.contact-form-title Log in
+        +input-email("EMAIL")
+        +input-password("PASSWORD")
+        +input-code("Authentication code")
+      +button(type="submit").button--modal
+        | Log In
+      .modal-login-links
+        a(href="#") Reset you password 
+        |  or 
+        a(href="#") register
 
-mixin modal-error-accept(data) 
-  .modal.modal-error-accept#modal-error-accept
+mixin modal-signup(data) 
+  .modal.modal-connect#modal-signup
     button.modal-close(data-izimodal-close="")
       img(src="img/modals/modal-close-icon.svg", alt="Close")
-    .modal-error-accept-inner
-      h2.modal-error-accept-title Tittle error
-      p.modal-error-accept-message
-        | Contrary to&nbsp;popular belief, Lorem Ipsum is&nbsp;not simply random text. It&nbsp;has roots in&nbsp;a&nbsp;piece of&nbsp;classical Latin literature from 45&nbsp;BC, making it&nbsp;over 2000 years old. Richard McClintock, a&nbsp;Latin professor at&nbsp;Hampden-Sydney College in&nbsp;Virginia, looked up&nbsp;one of&nbsp;the more obscure
-      .modal-error-accept-buttons
-        h4.modal-error-accept-buttons-title Are you sure you want to continue?
-        .modal-error-accept-buttons-inner
-          +button(type="button").button-filled
-            | Yes
-          +button(type="button" data-izimodal-close="").button--red
-            | Cancel
+    .modal-signup-inner
+      +form
+        h3.contact-form-title Sign up
+        +input-email("EMAIL")
+        +input-password("PASSWORD")
+        +input-password-confirm("Password confirmation")
+        +input-company("Company name")
+        +input-nickname("Nickname")
+        +input-full-name("Full name")
+        +input-checkbox("Receive newsletters", {id: "news"})
+        +input-checkbox("I accept the Affiliate Terms & Conditions", {id: "terms"})
+      +button(type="submit").button--modal
+        | Log In
 
-mixin modal-error(data) 
-  .modal.modal-error#modal-error
+mixin modal-thankyou(data) 
+  .modal.modal-connect#modal-thankyou
     button.modal-close(data-izimodal-close="")
       img(src="img/modals/modal-close-icon.svg", alt="Close")
-    .modal-error-inner
-      h2.modal-error-title Error
-      p.modal-error-message
-        | It is a worldwide blockchain ecosystem that brings together several cutting-edge technologies, including NFT and fintech. You are aware that the cryptocurrency business has entered a new phase with endless opportunities for growth with the introduction of non-fungible tokens. As a result, we are combining two massive ecosystems, namely fintech and NFT finance, to develop a new form of blockchain bank system.
-      .modal-error-button
-        +button(type="button" data-izimodal-close="").button--red-filled
-          | Close
-
-mixin modal-success(data) 
-  .modal.modal-success#modal-success
-    button.modal-close(data-izimodal-close="")
-      img(src="img/modals/modal-close-icon.svg", alt="Close")
-    .modal-success-inner
-      h2.modal-success-title Success
-    .modal-success-button
-      +button(type="button" data-izimodal-close="").button--red-filled
-        | Close
-
-mixin modal-processing(data) 
-  .modal.modal-processing#modal-processing
-    button.modal-close(data-izimodal-close="")
-      img(src="img/modals/modal-close-icon.svg", alt="Close")
-    .modal-success-inner
-      h2.modal-processing-title Processing<br> Transaction...
-    .modal-processing-button
-      +button(type="button" data-izimodal-close="").button--red-filled
-        | Close
+    .modal-thankyou-inner
+      h3.contact-form-title Thank you!
+      p.modal-thankyou-message
+        | You will receive an email with a couple of questions. After you answer these questions we will create an account for you.
+      .modal-thankyou-button
+        +button(type="button" data-izimodal-close="").button--modal
+          | Done

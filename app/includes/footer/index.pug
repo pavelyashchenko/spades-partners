@@ -15,35 +15,35 @@ mixin footer()
             ul.footer__menu-ul
               li.footer__menu-li.footer__menu-li--title Home
               li.footer__menu-li
-                a.footer__menu-link(href="#") Comissions
+                a.footer__menu-link(href="#contact") Comissions
               li.footer__menu-li
-                a.footer__menu-link(href="#") Brands
+                a.footer__menu-link(href="#brand") Brands
               li.footer__menu-li
-                a.footer__menu-link(href="#") Testimonials
+                a.footer__menu-link(href="#why") Testimonials
               li.footer__menu-li
-                a.footer__menu-link(href="#") Why us
+                a.footer__menu-link(href="#about") Why us
               li.footer__menu-li
-                a.footer__menu-link(href="#") FAQ
+                a.footer__menu-link(href="#faq") FAQ
             
             .footer__menu-right
               ul.footer__menu-ul
                 li.footer__menu-li.footer__menu-li--title Information
                 li.footer__menu-li
-                  a.footer__menu-link(href="#") Terms and Conditions
+                  a.footer__menu-link(href="/terms.html" target="_blank") Terms and Conditions
                 li.footer__menu-li
-                  a.footer__menu-link(href="#") Privacy Policy
+                  a.footer__menu-link(href="/privacy.html" target="_blank") Privacy Policy
                 li.footer__menu-li
-                  a.footer__menu-link(href="#") About us
+                  a.footer__menu-link(href="#about") About us
 
               ul.footer__menu-ul
                 li.footer__menu-li.footer__menu-li--title Contacts
                 li.footer__menu-li
-                  a.footer__menu-link(href="#") Contact Us
+                  a.footer__menu-link(href="#contact") Contact Us
                 li.footer__menu-li
                   a.footer__menu-link(href="mailto:cooperation@spadespartners.com") cooperation@spadespartners.com
 
       .footer__socials
         .footer__icons
-          each key, value in {'img/icons/Facebook.svg': 'Facebook', 'img/icons/Instagram.svg': 'Instagram', 'img/icons/linkedin.svg': 'Linkedin', 'img/icons/Twitter.svg': 'Twitter', 'img/icons/Youtube.svg': 'Youtube'}
+          each key, value in {'img/icons/Facebook.svg': 'Facebook', 'img/icons/Instagram.svg': 'Instagram', 'img/icons/linkedin.svg': 'Linkedin', 'img/icons/Twitter.svg': 'Twitter'}
             a.footer__icons-item(href="#" target="_blank")
               img(src=value, alt=key)
