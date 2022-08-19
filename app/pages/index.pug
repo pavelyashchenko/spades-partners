@@ -226,61 +226,61 @@ block main
             +button(href="www.sloterra.com" target="_blank").button--bordered
               | Visit casino
 
-  section.review#review
-    .container
-      .review__inner
-         h2.review__title.section-title What people<br>
-          span.title-span are saying
-      .review__slider
-        .swiper#reviewSlider
-          .swiper-wrapper
-            .swiper-slide
-              .review__slide
-                .review__slide-bg
-                  .review__slide-title
-                    | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
-                  .review__slide-info
-                    .review__slide-rating
-                      img(src="img/review/stars-5.svg", alt="")
-                    .review__slide-name Rivaan Mona
-                    .review__slide-position GS Partners
+  //- section.review#review
+  //-   .container
+  //-     .review__inner
+  //-        h2.review__title.section-title What people<br>
+  //-         span.title-span are saying
+  //-     .review__slider
+  //-       .swiper#reviewSlider
+  //-         .swiper-wrapper
+  //-           .swiper-slide
+  //-             .review__slide
+  //-               .review__slide-bg
+  //-                 .review__slide-title
+  //-                   | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+  //-                 .review__slide-info
+  //-                   .review__slide-rating
+  //-                     img(src="img/review/stars-5.svg", alt="")
+  //-                   .review__slide-name Rivaan Mona
+  //-                   .review__slide-position GS Partners
 
-            .swiper-slide
-              .review__slide
-                .review__slide-bg
-                  .review__slide-title
-                    | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
-                  .review__slide-info
-                    .review__slide-rating
-                      img(src="img/review/stars-3.svg", alt="")
-                    .review__slide-name Rivaan Mona
-                    .review__slide-position GS Partners
+  //-           .swiper-slide
+  //-             .review__slide
+  //-               .review__slide-bg
+  //-                 .review__slide-title
+  //-                   | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+  //-                 .review__slide-info
+  //-                   .review__slide-rating
+  //-                     img(src="img/review/stars-3.svg", alt="")
+  //-                   .review__slide-name Rivaan Mona
+  //-                   .review__slide-position GS Partners
               
-            .swiper-slide
-              .review__slide
-                .review__slide-bg
-                  .review__slide-title
-                    | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
-                  .review__slide-info
-                    .review__slide-rating
-                      img(src="img/review/stars-4.svg", alt="")
-                    .review__slide-name Rivaan Mona
-                    .review__slide-position GS Partners
+  //-           .swiper-slide
+  //-             .review__slide
+  //-               .review__slide-bg
+  //-                 .review__slide-title
+  //-                   | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+  //-                 .review__slide-info
+  //-                   .review__slide-rating
+  //-                     img(src="img/review/stars-4.svg", alt="")
+  //-                   .review__slide-name Rivaan Mona
+  //-                   .review__slide-position GS Partners
 
-            .swiper-slide
-              .review__slide
-                .review__slide-bg
-                  .review__slide-title
-                    | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
-                  .review__slide-info
-                    .review__slide-rating
-                      img(src="img/review/stars-5.svg", alt="")
-                    .review__slide-name Rivaan Mona
-                    .review__slide-position GS Partners            
+  //-           .swiper-slide
+  //-             .review__slide
+  //-               .review__slide-bg
+  //-                 .review__slide-title
+  //-                   | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+  //-                 .review__slide-info
+  //-                   .review__slide-rating
+  //-                     img(src="img/review/stars-5.svg", alt="")
+  //-                   .review__slide-name Rivaan Mona
+  //-                   .review__slide-position GS Partners            
 
-          .swiper-button-wrapper
-            .swiper-button-prev
-            .swiper-button-next
+  //-         .swiper-button-wrapper
+  //-           .swiper-button-prev
+  //-           .swiper-button-next
 
   section.faq#faq
     .container 
@@ -289,16 +289,22 @@ block main
           span.title-span FAQ
 
       +accordion()
+        +accordion-item("<h3>How it works</h3>")
+          | If you have a website you can earn money with Spades Partners. Register for our affiliate program and submit your website URL. Once approved, we'll provide you with affiliate ID and access to all our marketing tools to help you promote some of the hottest and best converting gaming products on the Net. Then you can place our banners and links on your website. The more clicks you have on our links , the more players and, eventually, more money you will earn.
+        +accordion-item("<h3>What is a sub-affiliate program?</h3>")
+          | Our sub-affiliate program offers you a revenue share for referring other affiliates into the Spades Partners. As a Spades Partners, you are entitled to additional commissions when you recruit affiliates for all Sloterra products. You will earn a percentage of the commissions paid to the website (sub-affiliate) that you have recruited for the lifetime of that affiliates activity with Sloterra.
         +accordion-item("<h3>What is an affiliate program?</h3>")
-          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
-        +accordion-item("<h3>What is an affiliate program?</h3>")
-          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
-        +accordion-item("<h3>What is an affiliate program?</h3>")
-          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
-        +accordion-item("<h3>What is an affiliate program?</h3>")
-          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
-        +accordion-item("<h3>What is an affiliate program?</h3>")
-          | An affiliate program is a form of a partnership between a merchant and an advertiser that is directed towards generating leads for the affiliate program. A lead is a player who has registered and made a first time deposit. When a player uses an affiliate tracker link to register and deposit, this is your player. If all the requirements are fulfilled, you shall receive a payment depending on the commission rate that has been fixed before the campaign started.
+          | An affiliate program a partnership between an online merchant and a website owner where the online merchant rewards the website owner for any revenue generated through the merchant's links on the partner's website .  As an affiliate, you are paid a commission every time a customer is referred through your website tracking links and generates a deposit and revenue for the merchant. 
+        +accordion-item("<h3>Do I need to have a website to join?</h3>")
+          | We will review each case on an individual basis. Please contact us at <a href="mailto:contact@spadespartners.com">contact@spadespartners.com</a>.
+        +accordion-item("<h3>How and when will I get paid?</h3>")
+          | We pay affiliate commissions by the 15th of the following month for all orders completed before the 5th day of that month. Minimum withdrawal amount is $100.00. If your balance is less than the minimum amount then it will be carried forward to the next month.
+        +accordion-item("<h3>Can I get an exclusive offer or promotion to use on my website?</h3>")
+          | Sure. Pitch us your idea. We're always happy to discuss any exclusive promotions that can be beneficial to our mutual success. Please get in touch with our team.
+        +accordion-item("<h3>How do I get my tracking referral link and banners?</h3>")
+          | Affiliate links and banners are only available to our approved partners and can be accessed via your affiliate dashboard. 
+        +accordion-item("<h3>How many Spades Partners links can I put on my website?</h3>")
+          | Feel free to put as many Spades Partners links on your site as you like.
 
   section.contact#contact
     .container 
