@@ -1,5 +1,5 @@
 mixin form(attributes)
-  form#contact-form.form.contact-form&attributes(attributes)
+  form.form.contact-form&attributes(attributes)
     block
 
 mixin input-name(text)
@@ -101,6 +101,17 @@ mixin input-full-name(text)
       placeholder=(text=text)
       maxlenght="255"
     ).form-control.form-control--full-name
+
+mixin input-contacts(text)
+  .form__item
+    input(
+      aria-label=(text=text)
+      name="contacts"
+      type="text"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-control.form-control--contacts
 
 mixin input-checkbox(text, name, legend)
   -

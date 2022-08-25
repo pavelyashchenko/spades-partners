@@ -8,8 +8,8 @@ mixin modal-login(data)
         +input-email("EMAIL")
         +input-password("PASSWORD")
         +input-code("Authentication code")
-      +button(type="submit").button--modal
-        | Log In
+        +button(type="submit").button--modal
+          | Log In
       .modal-login-links
         a(href="#") Reset you password 
         |  or 
@@ -28,10 +28,21 @@ mixin modal-signup(data)
         +input-company("Company name")
         +input-nickname("Nickname")
         +input-full-name("Full name")
+        +input-contacts("skype/telegram")
         +input-checkbox("Receive newsletters", {id: "news"})
         +input-checkbox("I accept the Affiliate Terms & Conditions", {id: "terms"})
-      +button(type="submit").button--modal
-        | Log In
+        +button(type="submit").button--modal
+          | Log In
+      .modal-signup-contact
+        p.modal-signup-contact__text Contact Us:
+        .modal-signup-contact__icons
+          a(href="#" data-izimodal-open="#modal-contact").modal-signup-contact__icon
+            img(src="img/modals/Telegram.svg", alt="Telegram")
+          a(href="#" data-izimodal-open="#modal-contact").modal-signup-contact__icon
+            img(src="img/modals/Skype.svg", alt="Skype")
+          a(href="#" data-izimodal-open="#modal-contact").modal-signup-contact__icon
+            img(src="img/modals/MAIL.svg", alt="MAIL")
+
 
 mixin modal-thankyou(data) 
   .modal.modal-connect#modal-thankyou
@@ -42,3 +53,46 @@ mixin modal-thankyou(data)
       .modal-thankyou-button
         +button(type="button" data-izimodal-close="").button--modal
           | Done
+
+mixin modal-contact(data) 
+  .modal.modal-contact#modal-contact
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg", alt="Close")
+    .modal-contact-inner
+      h3.contact-form-title Our contacts
+      .modal-contact-main
+        .modal-contact-user
+          .modal-contact-user-img
+            img(src="img/modals/user-contact.svg", alt="contact")
+          .modal-contact-user-info
+            .modal-contact-user-info-name Nikolay
+            .modal-contact-user-info-contact
+              .modal-contact-user-info-contact-icon
+                img(src="img/modals/contact-telegram.svg", alt="telegram")
+              a(href="t.me/Spadepartners").modal-contact-user-info-contact-link t.me/Spadepartners
+            .modal-contact-user-info-contact
+              .modal-contact-user-info-contact-icon
+                img(src="img/modals/contact-subtract.svg", alt="skype")
+              a(href="t.me/Spadepartners").modal-contact-user-info-contact-link join.skype.com/invite/bePdQHlJ82TY
+            .modal-contact-user-info-contact
+              .modal-contact-user-info-contact-icon
+                img(src="img/modals/contact-mail.svg", alt="mail")
+              a(href="mailto:Nick@spadespartners.com").modal-contact-user-info-contact-link Nick@spadespartners.com
+        .modal-contact-user
+          .modal-contact-user-img
+            img(src="img/modals/user-contact.svg", alt="contact")
+          .modal-contact-user-info
+            .modal-contact-user-info-name Valeria
+            .modal-contact-user-info-contact
+              .modal-contact-user-info-contact-icon
+                img(src="img/modals/contact-telegram.svg", alt="telegram")
+              a(href="t.me/rebsw").modal-contact-user-info-contact-link t.me/rebsw 
+            .modal-contact-user-info-contact
+              .modal-contact-user-info-contact-icon
+                img(src="img/modals/contact-subtract.svg", alt="skype")
+              a(href="join.skype.com/invite/moRfcML8cAq2").modal-contact-user-info-contact-link join.skype.com/invite/moRfcML8cAq2
+            .modal-contact-user-info-contact
+              .modal-contact-user-info-contact-icon
+                img(src="img/modals/contact-mail.svg", alt="mail")
+              a(href="mailto:Valery@spadespartners.com").modal-contact-user-info-contact-link Valery@spadespartners.com
+        
